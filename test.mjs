@@ -1,5 +1,5 @@
 import test from 'ava';
-import lowercaseKeys from './index.js';
+import lowercaseKeys from './esm/index.js';
 
 test('main', t => {
 	t.true(lowercaseKeys({FOO: true}).foo);

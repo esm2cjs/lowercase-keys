@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../esm/index.js"],
+  "sourcesContent": ["export default function lowercaseKeys(object) {\n\treturn Object.fromEntries(Object.entries(object).map(([key, value]) => [key.toLowerCase(), value]));\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAe,SAAR,cAA+B,QAAQ;AAC7C,SAAO,OAAO,YAAY,OAAO,QAAQ,MAAM,EAAE,IAAI,CAAC,CAAC,KAAK,KAAK,MAAM,CAAC,IAAI,YAAY,GAAG,KAAK,CAAC,CAAC;AACnG;",
+  "names": []
+}
