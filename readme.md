@@ -1,32 +1,52 @@
-# lowercase-keys
+# @esm2cjs/lowercase-keys
 
-> Lowercase the keys of an object
-
-Check out [`map-obj`](https://github.com/sindresorhus/map-obj) if you need support for deep iteration.
+This is a fork of https://github.com/sindresorhus/lowercase-keys, but automatically patched to support ESM **and** CommonJS, unlike the original repository.
 
 ## Install
 
-```sh
-npm install lowercase-keys
+You can use an npm alias to install this package under the original name:
+
+```
+npm i lowercase-keys@npm:@esm2cjs/lowercase-keys
+```
+
+```jsonc
+// package.json
+"dependencies": {
+    "lowercase-keys": "npm:@esm2cjs/lowercase-keys"
+}
+```
+
+but `npm` might dedupe this incorrectly when other packages depend on the replaced package. If you can, prefer using the scoped package directly:
+
+```
+npm i @esm2cjs/lowercase-keys
+```
+
+```jsonc
+// package.json
+"dependencies": {
+    "@esm2cjs/lowercase-keys": "^ver.si.on"
+}
 ```
 
 ## Usage
 
 ```js
-import lowercaseKeys from 'lowercase-keys';
+// Using ESM import syntax
+import lowercaseKeys from "@esm2cjs/lowercase-keys";
 
-lowercaseKeys({FOO: true, bAr: false});
-//=> {foo: true, bar: false}
+// Using CommonJS require()
+const lowercaseKeys = require("@esm2cjs/lowercase-keys").default;
 ```
 
-## API
+> **Note:**
+> Because the original module uses `export default`, you need to append `.default` to the `require()` call.
 
-### lowercaseKeys(object)
+For more details, please see the original [repository](https://github.com/sindresorhus/lowercase-keys).
 
-Returns a new object with the keys lowercased.
+## Sponsoring
 
-## lowercase-keys for enterprise
+To support my efforts in maintaining the ESM/CommonJS hybrid, please sponsor [here](https://github.com/sponsors/AlCalzone).
 
-Available as part of the Tidelift Subscription.
-
-The maintainers of lowercase-keys and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-lowercase-keys?utm_source=npm-lowercase-keys&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+To support the original author of the module, please sponsor [here](https://github.com/sindresorhus/lowercase-keys).
